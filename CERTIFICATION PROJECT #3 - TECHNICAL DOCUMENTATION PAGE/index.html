@@ -6,82 +6,202 @@
         <title>TypeScript Documentation</title>
     </head>
     <body>
-        <ul>
-            <li>Introduction</li>
-            <li>Hello World!</li>
-            <li>Variables</li>
-            <li>Declaring Variables</li>
-            <li>Data Types</li>
-            <li>Operators</li>
-            <li>If Else Statement</li>
-            <li>While Statement</li>
-            <li>Funciton Declarations</li>
-            <li>Reference</li>
-        </ul>
+        <main id="main-doc">
+            <ul>
+                <li>Introduction</li>
+                <li>Hello World!</li>
+                <li>Variables</li>
+                <li>Data Types</li>
+                <li>Operators</li>
+                <li>If Else Statement</li>
+                <li>While Statement</li>
+                <li>Do While Statement</li>
+                <li>Function Declarations</li>
+                <li>Reference</li>
+            </ul>
 
-        <section>
-            <article id="introduction">
-                <h2>Introduction</h2>
-                <p>
-                    TypeScript is a free open-source high-level programming language developed by Microsoft which adds static typing with optional type annotations to JavaScript.
-Its designed to be used in the development of large applications and with the purpose of make them more secure.
-You could find them with the extensions: .ts, .tsx, .mts, .cts.
-                </p>
-            </article>
-            <article id="hello-world">
-                <h2>Hello World!</h2>
-                <p></p>
-            </article>
-            <article>
-                <h2>Variables</h2>
-                <p>
-                   <div>
-                    Var: Is only available inside the block where they are defined.
-                   </div>
-                   <div>
-                    Let: Is available throughout the function in which they are declared.
-                   </div>
-                   <div>
-                    Const: All declarations other than those you plan to modify should use this declaration.
-                    <!--PONER 3 BOXES CON DISPLAY FLEX-->
-                   </div>
-                </p>
-            </article>
-            <article>
-                <h2>Declaring Variables</h2>
-                <p></p>
-            </article>
-            <article>
-                <h2>Data Types</h2>
-                <p>
-                String: Represents string values like “Hello World!”.
-                Number: JavaScript does not have a special value like integers or float, the are only numbers.
-                Boolean: Is for the 2 values true or false..
-                Any: Special type that you can use when you don’t want a particular value and every variable that is initialized with null or undefined, will have this type.
-                </p>
-            </article>
-            <article>
-                <h2>Operators</h2>
-                <p></p>
-            </article>
-            <article>
-                <h2>If Else Statement</h2>
-                <p></p>
-            </article>
-            <article>
-                <h2>While Statement</h2>
-                <p></p>
-            </article>
-            <article>
-                <h2>Function Declarations</h2>
-                <p></p>
-            </article>
-            <article>
-                <h2>References</h2>
-                <a href="https://en.wikipedia.org/wiki/TypeScript">Wikipedia</a>
-                <a href="https://sentry.io/answers/difference-between-let-and-var-in-javascript/">Sentry</a>
-                <a href="https://www.typescriptlang.org/">TypeCript Official Documentation</a>
-            </article>
-        </section>
+            <section class="main-section" id="Introduction">
+                <header>Introduction</header>
+                <article id="introduction">
+                    <p>
+                        TypeScript is a free open-source high-level programming language developed by Microsoft which adds static typing with optional type annotations to JavaScript.
+    Its designed to be used in the development of large applications and with the purpose of make them more secure.
+    You could find them with the extensions: .ts, .tsx, .mts, .cts.
+                    </p>
+                </article>
+            </section>
+            <section class="main-section" id="hello-world">
+                <header>Hello World!</header>
+                <article id="hello-world">
+                    <p>
+                        The tradition of using the phrase “Hello, world!” was influenced by an example in the book of “The C Programming Language” and is also used to make sure the computer language was correctly installed.
+                    </p>
+                    <code>
+                        <div>let message: string = “Hello, world!”;</div>
+                        <div>console.log(message);</div>
+                    </code>
+                </article>
+            </section>
+            <section class="main-section" id="variables">
+                <header>Variables</header>
+                <article>
+                    <p>
+                    <div>
+                        Var: Is only available inside the block where they are defined.
+                    </div>
+                    <div>
+                        Let: Is available throughout the function in which they are declared.
+                    </div>
+                    <div>
+                        Const: All declarations other than those you plan to modify should use this declaration.
+                        <!--PONER 3 BOXES CON DISPLAY FLEX-->
+                    </div>
+                    </p>
+                </article>
+            </section>
+            <section class="main-section" id="data-types">
+                <header>Data Types</header>
+                <article>
+                    <p>
+                    String: Represents string values like “Hello World!”.
+                    Number: JavaScript does not have a special value like integers or float, the are only numbers.
+                    Boolean: Is for the 2 values true or false..
+                    Any: Special type that you can use when you don’t want a particular value and every variable that is initialized with null or undefined, will have this type.
+                    </p>
+                </article>
+            </section>
+            <section class="main-section" id="operators">
+                <header>Operators</header>
+                <article>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>Arithmetic</th>
+                                <td>
+                                    <div>Addition (+)</div>
+                                    <div>Subtraction (-)</div>
+                                    <div>Multiplication (*)</div>
+                                    <div>Division (/)</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Assignment</th>
+                                <td>This kind of operators assigns the right-hand operand to the left-hand operand.</td>
+                                <td>
+                                    <div>Assign (=)</div>
+                                    <div>Add and Assign (+=)</div>
+                                    <div>Subtract and Assign (-=)</div>
+                                    <div>Multiply and Assign (*=)</div>
+                                    <div>Split and Assign (/=)</div>
+                                    <div>Rest and Assign (%=)</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Comparison</th>
+                                <td>Which compare 2 values and return a boolean value, true or false.</td>
+                                <td>
+                                    <div>Equality (==)</div>
+                                    <div>Strict Equality (===)</div>
+                                    <div>Inequality (!=)</div>
+                                    <div>Strict Inequality (!==).</div>
+                                    <div>Greater Than (>).</div>
+                                    <div>Less Than (<).</div>
+                                <div>Greater Than Or Equal To (>=).</div>
+                                <div>Less Than Or Equal To (<=).</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Logical</th>
+                                <td>Used to determine the logic between variables or values.</td>
+                                <td>
+                                    <div>Logical And (&&)</div>
+                                    <div>Logical Or (||)</div>
+                                    <div>Logical Not (!)</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Ternary</th>
+                                <td>This is a shorthand for the if-else statement.</td>
+                                <td>&ltcondition&gt ? &ltoutput&gt : &ltoutput&gt</td>
+                            </tr>
+                            <tr>
+                                <th>Spread</th>
+                                <td>This operator allows an iterable like an array to be expanded in places where 0 or more arguments are expected.</td>
+                                <td>(...)</td>
+                            </tr>
+                            <tr>
+                                <th>In</th>
+                                <td>Returns true if the specified property is contained in the specified object.</td>
+                            </tr>
+                            <tr>
+                                <th>Question Mark</th>
+                                <td>
+                                    This operator can be used for 2 situations:
+                                    <ol>
+                                        <li>Can be used to denote optional properties in interfaces or objects.</li>
+                                        <li>Allows you to safely access deeply nested properties.</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
+            </section>
+            <section class="main-section" id="if-else-statement">
+                <head>If Else Statement</head>
+                <article>
+                    <p>The “if-else” statement when you want to evaluate a condition and if its true the block within the if statement executes, and if its false, it executes the block within the else.</p>
+                    <code>
+                        <div>if (condition) &#10100</div>
+                        <div>//if-statements</div>
+                        <div>&#10101 else &#10100</div>
+                        <div>//else statements</div>
+                        <div>&#10101</div>
+                    </code>
+                </article>
+            </section>
+            <section class="main-section" id="while-statement">
+                <head>While Statement</head>
+                <article>
+                    <p>The “while” statement allows you to create a loop that executes a block of code as long as the condition is true.</p>
+                    <code>
+                        <div>while (condition) &#10100</div>
+                        <div>//block of code</div>
+                        <div>&#10101</div>
+                    </code>
+                </article>
+            </section>
+            <section class="main-section" id="do-while-statement">
+                <header>Do While Statement</header>
+                <article>
+                    <p>The “do while” statement executes the block of code within the curly braces until de condition is false.</p>
+                    <code>
+                        <div>do &#10100</div>
+                        <div>//block of code</div>
+                        <div>&#10101 while (condition);</div>
+                    </code>
+                </article>
+            </section>
+            <section class="main-section" id="function-declarations">
+                <header>Function Declarations</header>
+                <article>
+                    <p>Functions are the primary means of passing data around in JavaScript and with Typescript you can specify the types of both input and output values of functions.</p>
+                    <code>
+                        <div>function sayHello(message: string): any &#10100</div>
+                        <div>console.log(message);</div>
+                        <div>&#10101</div>
+                    </code>
+                </article>
+            </section>
+            <section class="main-section" id="references">
+                <header>References</header>
+                <article>
+                    <a href="https://en.wikipedia.org/wiki/TypeScript">Wikipedia</a>
+                    <a href="https://sentry.io/answers/difference-between-let-and-var-in-javascript/">Sentry</a>
+                    <a href="https://graphite.dev/guides/typescript-operators">Graphite</a>
+                    <a href="https://www.typescriptlang.org/">TypeCript Official Documentation</a>
+                </article>
+            </section>
+        </main>
     </body>
 </html>
