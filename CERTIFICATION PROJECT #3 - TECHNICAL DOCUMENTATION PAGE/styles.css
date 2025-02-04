@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Cascadia Code';
+    src: url(/fuente/CascadiaCode.ttf);
+}
+body {
+    font-family: 'Cascadia Code';
+    font-size: 22px;
+    width: 100%;
+}
+
+#main-doc {
+    position: absolute;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    border-right: solid;
+    border-color: #00273f;
+    background-color: #3178c6;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}
+
+nav header {
+    color: #fff;
+    font-size: 35px;
+    text-align: center;
+}
+
+.nav-link {
+    color: #fff;
+    border-left: 15px;
+    font-size: 24px;
+}
+
+.nav-list:hover {
+    background-color: #fff;
+    color: #3178c6;
+    cursor: pointer;
+}
+
+.main-section {
+    margin-right: 10%;
+    margin-left: 20%;
+}
