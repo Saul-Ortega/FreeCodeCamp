@@ -10,9 +10,15 @@
         <main id="main-doc">
             <nav id="navbar">
                 <header>Typescript Documentation</header>
+
+                <label for="checkbox">
+                    <img src="imagenes/LIST-OPEN.svg" alt="Icono de Lista" class="checkbutton">
+                </label>
+                <input type="checkbox" id="checkbox">
+
                 <ul id="nav-list">
                     <li class="nav-list"><a class="nav-link" href="#introduction">Introduction</a></li>
-                    <li class="nav-list"><a class="nav-link" href="#hello_world">Hello World!</a></li>
+                    <li class="nav-list"><a class="nav-link" href="#hello_world" onclick="document.getElementById('checkbox')">Hello World!</a></li>
                     <li class="nav-list"><a class="nav-link" href="#variables">Variables</a></li>
                     <li class="nav-list"><a class="nav-link" href="#data_types">Data Types</a></li>
                     <li class="nav-list"><a class="nav-link" href="#operators">Operators</a></li>
@@ -22,7 +28,6 @@
                     <li class="nav-list"><a class="nav-link" href="#function_declarations">Function Declarations</a></li>
                     <li class="nav-list"><a class="nav-link" href="#references">References</a></li>
                 </ul>
-                <img src="imagenes/LOGO.svg" alt="Logo de Typescript" id="logo-img">
             </nav>
             <section class="main-section" id="introduction">
                 <header>Introduction</header>
@@ -42,8 +47,8 @@
                     </p>
                     <div class="container">
                         <code>
-                            <div><span class="code-let">let</span> <span class="code-variable">message</span><span class="code-type">: string</span> <span class="code-assign">=</span> <span class="code-content">“Hello, world!”</span><span class="code-type">;</span></div>
-                            <div><span class="code-print">console.log(</span><span class="code-variable">message</span><span class="code-print">)</span><span class="code-type">;</span></div>
+                            <div><span class="code-type">let</span> <span class="code-variable">message</span><span class="code-type">: string</span> = <span class="code-content">“Hello, world!”</span>;</div>
+                            <div><span class="code-print">console.log</span><span class="code-type">(</span><span class="code-variable">message</span><span class="code-type">)</span>;</div>
                         </code>
                     </div>
                 </article>
@@ -158,11 +163,11 @@
                     <p>The “if-else” statement when you want to evaluate a condition and if its true the block within the if statement executes, and if its false, it executes the block within the else.</p>
                     <div class="container">
                         <code>
-                            <div>if (condition) &#10100</div>
-                            <div>//if-statements</div>
-                            <div>&#10101 else &#10100</div>
-                            <div>//else statements</div>
-                            <div>&#10101</div>
+                            <div><span class="code-type">if (</span><span class="code-variable">condition</span><span class="code-type">) &#10100</span></div>
+                            <div><span class="code-content indent">//if-statements</span></div>
+                            <div><span class="code-type">&#10101 else &#10100</span></div>
+                            <div><span class="code-content indent">//else statements</span></div>
+                            <div><span class="code-type">&#10101</span></div>
                         </code>
                     </div>
                 </article>
@@ -173,9 +178,9 @@
                     <p>The “while” statement allows you to create a loop that executes a block of code as long as the condition is true.</p>
                     <div class="container">
                         <code>
-                            <div>while (condition) &#10100</div>
-                            <div>//block of code</div>
-                            <div>&#10101</div>
+                            <div><span class="code-type">while (</span><span class="code-variable">condition</span><span class="code-type">) &#10100</span></div>
+                            <div><span class="code-content indent">//block of code</span></div>
+                            <div><span class="code-type">&#10101</span></div>
                         </code>
                     </div>
                 </article>
@@ -186,9 +191,9 @@
                     <p>The “do while” statement executes the block of code within the curly braces until de condition is false.</p>
                     <div class="container">
                         <code>
-                            <div>do &#10100</div>
-                            <div>//block of code</div>
-                            <div>&#10101 while (condition);</div>
+                            <div><span class="code-type">do &#10100</span></div>
+                            <div><span class="code-content indent">//block of code</span></div>
+                            <div><span class="code-type">&#10101 while (</span><span class="code-variable">condition</span><span class="code-type">)</span>;</div>
                         </code>
                     </div>
                 </article>
@@ -199,28 +204,28 @@
                     <p>Functions are the primary means of passing data around in JavaScript and with Typescript you can specify the types of both input and output values of functions.</p>
                     <div class="container">
                         <code>
-                            <div>function sayHello(message: string): any &#10100</div>
-                            <div>console.log(message);</div>
-                            <div>&#10101</div>
+                            <div><span class="code-type">function</span> <span class="code-variable">sayHello</span><span class="code-type">(</span><span class="code-variable">message</span><span class="code-type">): string: any &#10100</span></div>
+                            <div><span class="code-print indent">console.log</span><span class="code-type">(</span><span class="code-variable">message</span><span class="code-type">)</span>;</div>
+                            <div><span class="code-type">&#10101</span></div>
                         </code>
                     </div>
                 </article>
             </section>
             <section class="main-section" id="references">
                 <header>References</header>
-                <article>
-                    <div class="box">
-                        <a href="https://en.wikipedia.org/wiki/TypeScript" target="_blank">Wikipedia</a>
-                    </div>
-                    <div class="box">
-                        <a href="https://sentry.io/answers/difference-between-let-and-var-in-javascript/" target="_blank">Sentry</a>
-                    </div>
-                    <div class="box">
-                        <a href="https://graphite.dev/guides/typescript-operators" target="_blank">Graphite</a>
-                    </div>
-                    <div class="box">
-                        <a href="https://www.typescriptlang.org/" target="_blank">TypesCript Official Documentation</a>
-                    </div>
+                <article class="box-container">
+                    <a href="https://en.wikipedia.org/wiki/TypeScript" target="_blank" class="box-link">
+                        <div class="box">Wikipedia</div>
+                    </a>
+                    <a href="https://sentry.io/answers/difference-between-let-and-var-in-javascript/" target="_blank" class="box-link">
+                        <div class="box">Sentry</div>
+                    </a>
+                    <a href="https://graphite.dev/guides/typescript-operators" target="_blank" class="box-link">
+                        <div class="box">Graphite</div>
+                    </a>
+                    <a href="https://www.typescriptlang.org/" target="_blank" class="box-link">
+                        <div class="box">TypesCript Official Documentation</div>
+                    </a>
                 </article>
             </section>
         </main>
