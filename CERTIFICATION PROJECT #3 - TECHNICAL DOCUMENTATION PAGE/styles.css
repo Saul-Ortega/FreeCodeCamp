@@ -15,7 +15,7 @@ html {
 body {
     font-family: 'Cascadia Code';
     font-size: 22px;
-    width: 100%;
+    width: 100vw;
 }
 
 #main-doc {
@@ -46,7 +46,7 @@ body {
 
 nav header {
     color: #fff;
-    font-size: 40px;
+    font-size: 2vw;
     font-weight: bold;
     text-align: center;
     margin-top: 50px;
@@ -65,9 +65,9 @@ nav header {
 
 .nav-link {
     color: #fff;
-    border-left: 15px;
-    font-size: 24px;
+    font-size: 1.4vw;
     text-decoration: none;
+    margin-right: 1vw;
 }
 
 .nav-link:hover {
@@ -131,6 +131,27 @@ code {
     margin-left: 10%;
 }
 
+table {
+    width: 50vw;
+    height: fit-content;
+    margin: 0 auto;
+}
+
+th {
+    border-style: solid;
+    background-color: #3178c6;
+}
+
+td {
+    padding: 1vw;
+    border: solid;
+    background-color: rgb(0, 0, 0, 30%);
+}
+
+.table-content {
+    text-align: center;
+}
+
 .box-container {
     display: flex;
     flex-direction: row;
@@ -156,6 +177,7 @@ code {
     color: #fff;
     font-weight: bold;
     text-align: center;
+    text-decoration: none;
 }
 
 .box:hover {
@@ -166,6 +188,13 @@ code {
 
 .box-link:hover {
     color: #000;
+}
+
+@media screen and (max-width: 1280px) {
+    .last-box {
+        height: fit-content;
+    }
+   
 }
 
 @media screen and (max-width: 1002px) {
