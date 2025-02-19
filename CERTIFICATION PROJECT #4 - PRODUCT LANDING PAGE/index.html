@@ -5,14 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="short icon" href="images/LOGO.png">
         <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
         <title>Java Grains</title>
     </head>
     <body>
         <header id="header">
             <img src="images/LOGO.png" alt="Java Coffee logo" id="header-img">
-            <h1>Java Grains</h1>
+            <h1 class="title">Java Grains</h1>
             <nav id="nav-bar">
-                <ul>
+                <ul class="nav-list">
                     <li class="nav-link">
                         <a href="#history">Home</a>
                     </li>
@@ -31,27 +34,38 @@
         <main>
             <section class="history" id="history">
                 <h2>History</h2>
-                <p>The story of <span>Java Grains</span> begins in the heart of an island called by the same name located in Indonesia.</p>
-                <p>It was brung from Ethiopia by Dutch because the island offered optimal conditions for it's growth.</p>
-                <p>They started growing Arabica coffee and then continued with Robusta and Liberica due to a plage in 1880.</p>
-                <img src="images/JAVA-ISLAND.jpg" alt="Java Island Image">
+                <div class="container">
+                    <p>The story of <span>Java Grains</span> begins in the heart of an island called by the same name located in Indonesia.
+                    It was brung from Ethiopia by Dutch because the island offered optimal conditions for it's growth.
+                    They started growing Arabica coffee and then continued with Robusta and Liberica due to a plage in 1880.</p>
+                    <img src="images/JAVA-ISLAND.jpg" alt="Java Island Image" id="island-img">
+                </div>
             </section>
             <section class="how-its-made" id="how-its-made">
                 <h2>How It's Made</h2>
-                <img src="images/PLANT.svg" alt="Plant Icon">
-                <p>The plant could be cultivated both in the shade and in the sun once it's done, we wait between 3-4 years to produce the first harvesting, then the plant could last for about 20 years.</p>
-                <img src="images/HAND.svg" alt="Hand Icon">
-                <p>We do the picking hand-made to don't damage the plant and we leave the ones that are still green.</p>
-                <img src="images/WATER-DROP.svg" alt="Water Drop Icon">
-                <p>After that, the grains are exposed to hot air and humidity to modify the color and flavour.</p>
-                <img src="images/TRUCK.svg" alt="Truck Icon">
-                <p>To finish, the grains are baked and packed ready for it's shipment.</p>
-                <video src="videos/COFFEE-GRAINS.mp4" id="video" autoplay>Your Browser Doesn't Admit This Element</video>
+                <div class="container-how-its-made">
+                    <img src="images/PLANT.svg" alt="Plant Icon" class="icon">
+                    <p>The plant could be cultivated both in the shade and in the sun once it's done, we wait between 3-4 years to produce the first harvesting, then the plant could last for about 20 years.</p>
+                </div>
+                <div class="container-how-its-made">
+                    <img src="images/HAND.svg" alt="Hand Icon" class="icon">
+                    <p>We do the picking hand-made to don't damage the plant and we leave the ones that are still green.</p>
+                </div>
+                <div class="container-how-its-made">
+                    <img src="images/WATER-DROP.svg" alt="Water Drop Icon" class="icon">
+                    <p>After that, the grains are exposed to hot air and humidity to modify the color and flavour.</p>
+                </div>
+                <div class="container-how-its-made">
+                    <img src="images/TRUCK.svg" alt="Truck Icon" class="icon">
+                    <p>To finish, the grains are baked and packed ready for it's shipment.</p>
+                </div>
+                <video src="videos/COFFEE-GRAINS.mp4" id="video" class="icon" autoplay>Your Browser Doesn't Admit This Element</video>
             </section>
             <section class="pricing" id="pricing">
-                <h2>Pricing</h2>
+                <h2 class="pricing-title">Pricing</h2>
                 <div class="pricing-item">
                     <h3>Free Sample</h3>
+                    <hr>
                     <ol>
                         <li>10g of Java Coffee</li>
                     </ol>
@@ -59,6 +73,7 @@
                 </div>
                 <div class="pricing-item">
                     <h3>1 Month Subscription</h3>
+                    <hr>
                     <ol>
                         <li>200g of Java Coffee</li>
                         <li>1 surprise</li>
@@ -67,6 +82,7 @@
                 </div>
                 <div class="pricing-item">
                     <h3>1 Year Subscription</h3>
+                    <hr>
                     <ol>
                         <li>5 kg of Java Coffee</li>
                         <li>Free Shipment</li>
@@ -79,21 +95,23 @@
             <section class="get-in-touch" id="get-in-touch">
                 <h2>Get In Touch</h2>
                 <form action="https://www.freecodecamp.com/email-submit" id="form">
-                    <label for="email">Enter Your Gmail:
-                        <input type="email" name="email" id="email" placeholder="user@javacoffee.com" required>
-                    </label>
-                    <label for="terms-and-conditions">
-                        <input type="checkbox" name="terms-and-conditions" id="terms-and-conditions" required>I Accept The Terms And Conditions.
-                    </label>
-                    <label for="submit">
-                        <input type="submit" name="submit" id="submit" value="Submit">
-                    </label>
+                    <div class="container-form">
+                        <label for="email" class="email">Enter Your Gmail:
+                            <input type="email" name="email" id="email" placeholder="user@javacoffee.com" required>
+                        </label>
+                        <label for="terms-and-conditions" class="terms-and-conditions">
+                            <input type="checkbox" name="terms-and-conditions" id="terms-and-conditions" required>I Accept The Terms And Conditions.
+                        </label>
+                        <label for="submit">
+                            <input type="submit" name="submit" id="submit" value="Submit">
+                        </label>
+                    </div>
                 </form>
             </section>
-            <footer>
+        </main>
+        <footer>
                 <p>Java Coffee Shop</p>
                 <p>Since 2021</p>
-            </footer>
-        </main>
+        </footer>
     </body>
 </html>

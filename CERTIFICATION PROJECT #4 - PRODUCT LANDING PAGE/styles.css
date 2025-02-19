@@ -1,0 +1,214 @@
+:root {
+    --primary-color: #7a411a;
+    --secondary-color: #432304;
+    --primary-text-color: #000000;
+    --secondary-text-color: #ffffff;
+}
+
+::selection {
+    background-color: var(--primary-color);
+    color: var(--primary-text-color);
+}
+
+* {
+    box-sizing: border-box;
+    width: 100%;
+    scroll-behavior: smooth;
+    font-family: 'Atkinson Hyperlegible Next', sans-serif;
+    font-size: 25px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background: rgba(122, 65, 26, 0.7);
+    backdrop-filter: blur(10px);
+    width: 60%;
+    margin: 0 auto;
+    border: 3px solid var(--secondary-color);
+    border-radius: 25px;
+    position: fixed;
+    top: 4px;
+    left: 1%;
+    right: 1%;
+}
+
+#header-img {
+    max-width: 8%;
+}
+
+.title {
+    max-width: 25%;
+    font-size: 40px;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+
+}
+
+a {
+    color: var(--secondary-text-color);
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+}
+
+main {
+    width: 60%;
+    margin: 0 auto;
+}
+
+#history {
+    padding-top: 1%;
+}
+
+h2 {
+    margin-top: 15%;
+    padding-bottom: 3%;
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    width: 50%;
+    margin-right: 10%;
+}
+
+span {
+    font-weight: bold;
+    color: var(--secondary-color);
+    font-size: 30px;
+}
+
+#island-img {
+    max-width: 50%;
+    object-fit: cover;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#how-its-made {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    max-width: 10%;
+}
+
+.container-how-its-made {
+    display: flex;
+    align-items: center;
+}
+
+.container-how-its-made p {
+    width: 90%; 
+    padding-left: 5%;
+}
+
+#video {
+    max-width: 70%;
+    padding-top: 5%;
+}
+
+.pricing {
+    display: grid;
+    grid-template-columns: 25% 25% 40%;
+    gap: 3%;
+}
+
+.pricing-title {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.pricing-item {
+    background: linear-gradient(111deg, rgb(122, 65, 26), rgb(253, 187, 45));
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    height: 100%;
+}
+
+.pricing-item:hover {
+    border: 3px solid var(--secondary-color);
+}
+
+.pricing-item > h3 {
+    text-align: center;
+}
+
+hr {
+    border: 5px solid white;
+}
+
+.container-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    margin: 0 auto;
+    background: linear-gradient(111deg, rgb(122, 65, 26), rgb(253, 187, 45));
+    border-radius: 15px;
+    padding: 5%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.email {
+    font-size: 40px;
+}
+
+input {
+    border-radius: 15px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border: 3px solid white;
+}
+
+.terms-and-conditions {
+    display: flex;
+    flex-direction: row;
+    font-size: 25px;
+}
+
+#terms-and-conditions {
+    width: 20px;
+    height: 20px;
+}
+
+#submit {
+    background-color: var(--secondary-color);
+    color: var(--secondary-text-color);
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(122, 65, 26, 0.7);
+    backdrop-filter: blur(10px);
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 4px;
+    border: 3px solid var(--secondary-color);
+    border-radius: 25px;
+}
+
+footer > p {
+    color: var(--secondary-text-color);
+    margin-left: 30%;
+}
