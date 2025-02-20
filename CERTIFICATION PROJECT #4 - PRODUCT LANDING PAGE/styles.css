@@ -387,13 +387,11 @@ footer > p {
     .pricing {
         display: flex;
         flex-direction: column;
-        min-width: 280px;
         margin: 0 auto;
         gap: 3vw;
     }
 
     .container-form {
-        min-width: 280px;
+        min-width: 110%;
     }
-
 }
