@@ -1,13 +1,16 @@
 <!doctype html>
-<html lan="en">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <title>Personal Portfolio</title>
     </head>
-    <body>
-        <nav id="nav-bar">
+    <body>  
+        <nav id="navbar">
             <ul class="nav-unordered-list">
                 <li class="nav-list">
                     <a href="#welcome-section" class="nav-link">
@@ -32,34 +35,42 @@
             </ul>
         </nav>
         <section id="welcome-section">
-            <h1>Saúl Ortega Rodríguez</h1>
-            <p>Software Developer</p>
-            <img src="IMAGES/PROFILE.webp" alt="Image Of Profile">
+            <div class="container-welcome">
+                <h1>Saúl Ortega Rodríguez</h1>
+                <p class="job">Software Developer</p>
+                <p class="explanation">
+                    I really like programming because I love the idea of think about something like a product or a progam and make it a reality.
+                    I'm currently studying a Higher Level Training about Multiplatform Application Development and I'm excited to get into this field.
+                </p>
+            </div>
+            <div class="container-welcome">
+                <img src="IMAGES/PROFILE.webp" alt="Image Of Profile" class="profile-image">
+            </div>
         </section>
         <section id="projects">
             <h2>PROJECTS</h2>
-            <div class="projects-grid">
-                <a href="https://personaltypescriptdoc.netlify.app/" class="project-link">
-                    <div class="project-div">
-                        <img src="IMAGES/PROJECT-1.png" alt="Image Of Personal Typescript Documentation Page">
-                        <h3>Typescript Documentation Page</h3>
+            <div class="projects-flex">
+                <a href="https://personaltypescriptdoc.netlify.app/" class="project-link" target="_blank">
+                    <div class="project-tile">
+                        <img src="IMAGES/PROJECT-1.webp" alt="Image Of Personal Typescript Documentation Page" class="project-img">
+                        <h3 class="project-title">Typescript Documentation Page</h3>
                     </div>
                 </a>
-                <a href="https://personalproductpage.netlify.app/" class="project-link">
-                    <div class="project-div">
-                        <img src="IMAGES/PROJECT-2.png" alt="Image Of Personal Product Page">
-                        <h3>Java Grains Landing Page</h3>
+                <a href="https://personalproductpage.netlify.app/" class="project-link" target="_blank">
+                    <div class="project-tile">
+                        <img src="IMAGES/PROJECT-2.webp" alt="Image Of Personal Product Page" class="project-img">
+                        <h3 class="project-title">Java Grains Landing Page</h3>
                     </div>
                 </a>
             </div>
         </section>
         <section id="education">
+            <h2>EDUCATION</h2>
             <div class="education-timeline">
-                <h2>EDUCATION</h2>
                 <div class="education-div">
                     <h3>Higher Level Training - Multiplatform Application Development</h3>
                     <div class="education-date">
-                        <img src="IMAGES/CALENDAR-ICON.svg" alt="Calendar Icon">
+                        <img src="IMAGES/CALENDAR-ICON.svg" alt="Calendar Icon" class="education-icon">
                         <p>2024 - 2026</p>
                     </div>
                     <p></p>
@@ -67,7 +78,7 @@
                 <div class="education-div">
                     <h3>Higher Level Training - Finance and Administration</h3>
                     <div class="education-date">
-                        <img src="IMAGES/CALENDAR-ICON.svg" alt="Calendar Icon">
+                        <img src="IMAGES/CALENDAR-ICON.svg" alt="Calendar Icon" class="education-icon">
                         <p>2022 - 2024</p>
                     </div>
                     <p></p>
@@ -75,7 +86,7 @@
                 <div class="education-div">
                     <h3>Medium Level Training - Administrative Management</h3>
                     <div class="education-date">
-                        <img src="IMAGES/CALENDAR-ICON.svg" alt="Calendar Icon">
+                        <img src="IMAGES/CALENDAR-ICON.svg" alt="Calendar Icon" class="education-icon">
                         <p>2020 - 2022</p>
                     </div>
                     <p></p>
@@ -85,18 +96,20 @@
         <section id="contact">
             <h2>CONTACT</h2>
             <p>Do You Want To Hire Me?</p>
-            <a href="mailto:saulalbertoortegarodriguez@gmail.com">
-                <img src="IMAGES/EMAIL-ICON.svg" alt="Email Icon">
-                <p>Email</p>
-            </a>
-            <a href="https://www.linkedin.com/in/saul-alberto-ortega-rodriguez-1032b0232/">
-                <img src="IMAGES/LINKEDIN-ICON.svg" alt="Linkedin Icon">
-                <p>Linkedin</p>
-            </a>
-            <a href="https://github.com/Saul-Ortega">
-                <img src="IMAGES/GITHUB-ICON.svg" alt="Github Icon">
-                <p>Github</p>
-            </a>
+            <div class="container-profile">
+                <a href="mailto:saulalbertoortegarodriguez@gmail.com" class="profile-link" target="_blank">
+                    <img src="IMAGES/EMAIL-ICON.svg" alt="Email Icon" id="profile-icon">
+                    <p class="profile-paragraph">Email</p>
+                </a>
+                <a href="https://www.linkedin.com/in/saul-alberto-ortega-rodriguez-1032b0232/" id="profile-link" target="_blank">
+                    <img src="IMAGES/LINKEDIN-ICON.svg" alt="Linkedin Icon" class="profile-icon">
+                    <p class="profile-paragraph">Linkedin</p>
+                </a>
+                <a href="https://github.com/Saul-Ortega" id="profile-link" target="_blank">
+                    <img src="IMAGES/GITHUB-ICON.svg" alt="Github Icon" class="profile-icon">
+                    <p class="profile-paragraph">Github</p>
+                </a>
+            </div>
         </section>
     </body>
 </html>
