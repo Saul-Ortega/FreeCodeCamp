@@ -18,6 +18,10 @@
     font-size: 25px;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 header {
     display: flex;
     align-items: center;
@@ -31,6 +35,7 @@ header {
     top: 4px;
     left: 1%;
     right: 1%;
+    z-index: 1;
 }
 
 #header-img {
@@ -45,7 +50,7 @@ header {
 .nav-list {
     display: flex;
     list-style: none;
-
+    align-items: center;
 }
 
 a {
