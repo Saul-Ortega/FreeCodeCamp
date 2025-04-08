@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <title>TypeScript Documentation</title>
+    </head>
+    <body>
+        <main id="main-doc">
+            <nav id="navbar">
+                <header>Typescript Documentation</header>
+
+                <label for="checkbox">
+                    <img src="imagenes/LIST-OPEN.svg" alt="Icono de Lista" class="checkbutton">
+                </label>
+                <input type="checkbox" id="checkbox">
+
+                <ul id="nav-list">
+                    <li class="nav-list"><a class="nav-link" href="#introduction">Introduction</a></li>
+                    <li class="nav-list"><a class="nav-link" href="#hello_world">Hello World!</a></li>
+                    <li class="nav-list"><a class="nav-link" href="#variables">Variables</a></li>
+                    <li class="nav-list"><a class="nav-link" href="#data_types">Data Types</a></li>
+                    <li class="nav-list"><a class="nav-link" href="#operators">Operators</a></li>
+                    <li class="nav-list"><a class="nav-link" href="#if_else_statement">If Else Statement</a></li>
+                    <li class="nav-list"><a class="nav-link" href="#while_statement">While Statement</a></li>
+                    <li class="nav-list"><a class="nav-link" href="#do_while_statement">Do While Statement</a></li>
+                    <li class="nav-list"><a class="nav-link" href="#function_declarations">Function Declarations</a></li>
+                    <li class="nav-list"><a class="nav-link" href="#references">References</a></li>
+                </ul>
+            </nav>
+            <section class="main-section" id="introduction">
+                <header>Introduction</header>
+                <article id="introduction">
+                    <p>
+                        TypeScript is a free open-source high-level programming language developed by Microsoft which adds static typing with optional type annotations to JavaScript.
+                        Its designed to be used in the development of large applications and with the purpose of make them more secure.
+                        You could find them with the extensions: <span class="introduction-extensions">.ts, .tsx, .mts, .cts.</span>
+                    </p>
+                </article>
+            </section>
+            <section class="main-section" id="hello_world">
+                <header>Hello World!</header>
+                <article id="hello-world">
+                    <p>
+                        The tradition of using the phrase “Hello, world!” was influenced by an example in the book of “The C Programming Language” and is also used to make sure the computer language was correctly installed.
+                    </p>
+                    <div class="container">
+                        <code>
+                            <div><span class="code-type">let</span> <span class="code-variable">message</span><span class="code-type">: string</span> = <span class="code-content">“Hello, world!”</span>;</div>
+                            <div><span class="code-print">console.log</span><span class="code-type">(</span><span class="code-variable">message</span><span class="code-type">)</span>;</div>
+                        </code>
+                    </div>
+                </article>
+            </section>
+            <section class="main-section" id="variables">
+                <header>Variables</header>
+                <article>
+                    <p>
+                    <div>
+                        Var: Is only available inside the block where they are defined.
+                    </div>
+                    <div>
+                        Let: Is available throughout the function in which they are declared.
+                    </div>
+                    <div>
+                        Const: All declarations other than those you plan to modify should use this declaration.
+                    </div>
+                    </p>
+                </article>
+            </section>
+            <section class="main-section" id="data_types">
+                <header>Data Types</header>
+                <article>
+                    <p>
+                        <div class="div-data-types"> String: Represents string values like “Hello World!”.</div>
+                        <div class="div-data-types">Number: JavaScript does not have a special value like integers or float, the are only numbers.</div>
+                        <div class="div-data-types">Boolean: Is for the 2 values true or false.</div>
+                        <div class="div-data-types">Any: Special type that you can use when you don’t want a particular value and every variable that is initialized with null or undefined, will have this type.</div>
+                    </p>
+                </article>
+            </section>
+            <section class="main-section" id="operators">
+                <header>Operators</header>
+                <article>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>Arithmetic</th>
+                                <td colspan="2">
+                                    <div class="table-content">Addition (+)</div>
+                                    <div class="table-content">Subtraction (-)</div>
+                                    <div class="table-content">Multiplication (*)</div>
+                                    <div class="table-content">Division (/)</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Assignment</th>
+                                <td>This kind of operators assigns the right-hand operand to the left-hand operand.</td>
+                                <td>
+                                    <div class="table-content">Assign (=)</div>
+                                    <div class="table-content">Add and Assign (+=)</div>
+                                    <div class="table-content">Subtract and Assign (-=)</div>
+                                    <div class="table-content">Multiply and Assign (*=)</div>
+                                    <div class="table-content">Split and Assign (/=)</div>
+                                    <div class="table-content">Rest and Assign (%=)</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Comparison</th>
+                                <td>Which compare 2 values and return a boolean value, true or false.</td>
+                                <td>
+                                    <div class="table-content">Equality (==)</div>
+                                    <div class="table-content">Strict Equality (===)</div>
+                                    <div class="table-content">Inequality (!=)</div>
+                                    <div class="table-content">Strict Inequality (!==).</div>
+                                    <div class="table-content">Greater Than (>).</div>
+                                    <div class="table-content">Less Than (<).</div>
+                                    <div class="table-content">Greater Than Or Equal To (>=).</div>
+                                    <div class="table-content">Less Than Or Equal To (<=).</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Logical</th>
+                                <td>Used to determine the logic between variables or values.</td>
+                                <td>
+                                    <div class="table-content">Logical And (&&)</div>
+                                    <div class="table-content">Logical Or (||)</div>
+                                    <div class="table-content">Logical Not (!)</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Ternary</th>
+                                <td>This is a shorthand for the if-else statement.</td>
+                                <td class="table-content">&ltcondition&gt ? &ltoutput&gt : &ltoutput&gt</td>
+                            </tr>
+                            <tr>
+                                <th>Spread</th>
+                                <td>This operator allows an iterable like an array to be expanded in places where 0 or more arguments are expected.</td>
+                                <td class="table-content">(...)</td>
+                            </tr>
+                            <tr>
+                                <th>In</th>
+                                <td colspan="2">Returns true if the specified property is contained in the specified object.</td>
+                            </tr>
+                            <tr>
+                                <th>Question Mark</th>
+                                <td colspan="2">
+                                    This operator can be used for 2 situations:
+                                    <ol>
+                                        <li>Can be used to denote optional properties in interfaces or objects.</li>
+                                        <li>Allows you to safely access deeply nested properties.</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
+            </section>
+            <section class="main-section" id="if_else_statement">
+                <header>If Else Statement</header>
+                <article>
+                    <p>The “if-else” statement when you want to evaluate a condition and if its true the block within the if statement executes, and if its false, it executes the block within the else.</p>
+                    <div class="container">
+                        <code>
+                            <div><span class="code-type">if (</span><span class="code-variable">condition</span><span class="code-type">) &#10100</span></div>
+                            <div><span class="code-content indent">//if-statements</span></div>
+                            <div><span class="code-type">&#10101 else &#10100</span></div>
+                            <div><span class="code-content indent">//else statements</span></div>
+                            <div><span class="code-type">&#10101</span></div>
+                        </code>
+                    </div>
+                </article>
+            </section>
+            <section class="main-section" id="while_statement">
+                <header>While Statement</header>
+                <article>
+                    <p>The “while” statement allows you to create a loop that executes a block of code as long as the condition is true.</p>
+                    <div class="container">
+                        <code>
+                            <div><span class="code-type">while (</span><span class="code-variable">condition</span><span class="code-type">) &#10100</span></div>
+                            <div><span class="code-content indent">//block of code</span></div>
+                            <div><span class="code-type">&#10101</span></div>
+                        </code>
+                    </div>
+                </article>
+            </section>
+            <section class="main-section" id="do_while_statement">
+                <header>Do While Statement</header>
+                <article>
+                    <p>The “do while” statement executes the block of code within the curly braces until de condition is false.</p>
+                    <div class="container">
+                        <code>
+                            <div><span class="code-type">do &#10100</span></div>
+                            <div><span class="code-content indent">//block of code</span></div>
+                            <div><span class="code-type">&#10101 while (</span><span class="code-variable">condition</span><span class="code-type">)</span>;</div>
+                        </code>
+                    </div>
+                </article>
+            </section>
+            <section class="main-section" id="function_declarations">
+                <header>Function Declarations</header>
+                <article>
+                    <p>Functions are the primary means of passing data around in JavaScript and with Typescript you can specify the types of both input and output values of functions.</p>
+                    <div class="container">
+                        <code>
+                            <div><span class="code-type">function</span> <span class="code-variable">sayHello</span><span class="code-type">(</span><span class="code-variable">message</span><span class="code-type">): string: any &#10100</span></div>
+                            <div><span class="code-print indent">console.log</span><span class="code-type">(</span><span class="code-variable">message</span><span class="code-type">)</span>;</div>
+                            <div><span class="code-type">&#10101</span></div>
+                        </code>
+                    </div>
+                </article>
+            </section>
+            <section class="main-section" id="references">
+                <header>References</header>
+                <article class="box-container">
+                    <a href="https://en.wikipedia.org/wiki/TypeScript" target="_blank" class="box-link">
+                        <div class="box">Wikipedia</div>
+                    </a>
+                    <a href="https://sentry.io/answers/difference-between-let-and-var-in-javascript/" target="_blank" class="box-link">
+                        <div class="box">Sentry</div>
+                    </a>
+                    <a href="https://graphite.dev/guides/typescript-operators" target="_blank" class="box-link">
+                        <div class="box">Graphite</div>
+                    </a>
+                    <a href="https://www.typescriptlang.org/" target="_blank" class="box-link">
+                        <div class="box last-box">TSC Official Documentation</div>
+                    </a>
+                </article>
+            </section>
+        </main>
+    </body>
+</html>

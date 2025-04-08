@@ -1,0 +1,260 @@
+@font-face {
+    font-family: 'Cascadia Code';
+    src: url(/fuente/CascadiaCode.ttf);
+}
+
+::selection {
+    background-color: #3178c6;
+    color: #000;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cascadia Code';
+    font-size: 22px;
+    width: 100vw;
+}
+
+#main-doc {
+    position: absolute;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 16%;
+    height: 100%;
+    border-right: solid;
+    border-color: #00273f;
+    background-color: #3178c6;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}
+
+#checkbox {
+    display: none;
+}
+
+.checkbutton {
+    display: none;
+}
+
+nav header {
+    color: #fff;
+    font-size: 2vw;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.nav-list {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.nav-list:hover {
+    color: #3178c6;
+    cursor: pointer;
+}
+
+.nav-link {
+    color: #fff;
+    font-size: 1.4vw;
+    text-decoration: none;
+    margin-right: 1vw;
+}
+
+.nav-link:hover {
+    background-color: #fff;
+    color: #3178c6;
+}
+
+.main-section {
+    margin-right: 10%;
+    margin-left: 20%;
+}
+
+section header {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-weight: bold;
+    font-size: 30px;
+    background-color: #F1DD35;
+    width: fit-content;
+}
+
+.introduction-extensions {
+    color: #3178c6;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+p {
+    margin-bottom: 25px;
+}
+
+.container {
+    max-width: 500px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+code {
+    font-weight: bold;
+}
+
+.code-type {
+    color: #cd1ed8;
+}
+
+.code-variable {
+    color: #3178c6;
+}
+
+.code-print {
+    color: #dd9612;
+}
+
+.code-content {
+    color: #189b24;
+}
+
+.indent {
+    margin-left: 10%;
+}
+
+table {
+    width: 50vw;
+    height: fit-content;
+    margin: 0 auto;
+}
+
+th {
+    border-style: solid;
+    background-color: #3178c6;
+}
+
+td {
+    padding: 1vw;
+    border: solid;
+    background-color: rgb(0, 0, 0, 30%);
+}
+
+.table-content {
+    text-align: center;
+}
+
+.box-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 5%;
+}
+
+.box {
+    background-color: #3178c6;
+    border-radius: 20px;
+    height: 3vw;
+    width: 14vw;
+    display: flex;
+    text-decoration: none;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-link {
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+.box:hover {
+    cursor: pointer;
+    background-color: #F1DD35;
+    color: #000;
+}
+
+.box-link:hover {
+    color: #000;
+}
+
+@media screen and (max-width: 1280px) {
+    .last-box {
+        height: fit-content;
+    }
+   
+}
+
+@media screen and (max-width: 1002px) {
+    #navbar {
+        top: 0;
+        width: 100%;
+        height: 16%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        position: fixed;
+    }
+
+    nav header {
+        font-size: 5vw;
+        padding-left: 2vw;
+    }
+
+    #nav-list {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        overflow: hidden;
+        height: 0;
+        left: 0;
+        top: 80%;
+        background-color: #00273f;
+        gap: 1%;
+        transition: all 0.4s;
+    }
+    .checkbutton {
+        display: flex;
+        width: 11vw;
+        padding-right: 6vw;
+        cursor: pointer;
+    }
+
+    #main-doc {
+        margin-top: 20%;
+    }
+
+    .main-section {
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+
+    .nav-link {
+        font-size: 4vw;
+        font-weight: bold;
+    }
+    
+    #checkbox:checked + #nav-list{
+        padding-top: 5vw;
+        height: 100vh;
+    }
+
+    .nav-link:target + #checkbox {
+        overflow: hidden;
+    }
+}
