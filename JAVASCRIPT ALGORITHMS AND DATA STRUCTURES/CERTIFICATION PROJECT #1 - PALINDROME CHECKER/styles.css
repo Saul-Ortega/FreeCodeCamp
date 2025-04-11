@@ -9,6 +9,7 @@ body {
     width: 100vw;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: var(--background-color1);
@@ -57,3 +58,14 @@ label {
     border-radius: 15px;
 }
 
+/*
+.container-hint {
+    width: 15vw;
+    height: 15vh;
+    padding: 15vh;
+    border-left: 50px solid #efea20;
+    background-color: #f4f98f;
+    color: var(--text-color2);
+    border-radius: 15px;
+}
+*/
