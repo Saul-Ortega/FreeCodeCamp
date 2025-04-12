@@ -2,9 +2,14 @@ const textInput = document.getElementById('text-input');
 const checkButton = document.getElementById('check-btn');
 const resultDiv = document.getElementById('result');
 
+const cleanInputString = (str) => {
+    const regex = /[\W_]/g;
+    return str.replace(regex, '');
+}
+
 const reverseWord = (str) => {
     let reversedString = "";
-    for (let i = str.length; i >= 0; i--) {
+    for (let i = str.length - 1; i >= 0; i--) {
         reversedString += str.charAt(i);
     }
 
@@ -13,7 +18,7 @@ const reverseWord = (str) => {
 
 const isAPalindrome = (str) => {
     const reversedString = reverseWord(str);
-    if (str === reversedString) {
+    if (str.toUpperCase() === reversedString.toUpperCase()) {
         return true;
     }
 
@@ -21,16 +26,22 @@ const isAPalindrome = (str) => {
 }
 
 const resultMessage = (booleanResult) => {
-    if (booleanResult) {
-        return ' is a palindrome';
+    return booleanResult ? ' is a palindrome' : ' is not a palindrome';
+}
+
+const cleanInputTextValue = () => {
+    textInput.value = "";
+}
+
+function printResult() {
+    if (textInput.value.length == 0) {
+        alert('Please input a value');
+    } else {
+        const str = cleanInputString(textInput.value);
+        const printMessage = resultMessage(isAPalindrome(str));
+        resultDiv.innerText = textInput.value + printMessage;
+        cleanInputTextValue();
     }
-
-    return ' is not a palindrome';
 }
 
-function printResult(str) {
-    const printMessage = resultMessage(isAPalindrome(str));
-    resultDiv.innerText = str + printMessage;
-}
-
-checkButton.addEventListener('click', printResult(textInput.value));
+checkButton.addEventListener("click", printResult);
