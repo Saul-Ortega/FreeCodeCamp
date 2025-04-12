@@ -1,23 +1,33 @@
 :root {
     --background-color1: #5e28af;
+    --background-color2: #f4f98f;
+    --background-color3: #c7b8fa;
     --text-color1: #2f1461;
     --text-color2: white;
     --text-color3: #5e28af;
+    --text-color4: black;
+}
+
+::selection {
+    color: var(--text-color4);
+    background-color: var(--background-color2);
 }
 
 body {
     width: 100vw;
-    height: 100vh;
+    height: 98vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: var(--background-color1);
+    overflow-x: hidden;
+    font-family: 'Atkinson Hyperlegible Next', sans-serif;
 }
 
 .main-section {
     background-color: white;
-    padding: 15%;
+    padding: 90px;
     border: 3px solid black;
     border-radius: 150px;
 }
@@ -58,14 +68,43 @@ label {
     border-radius: 15px;
 }
 
-/*
 .container-hint {
-    width: 15vw;
-    height: 15vh;
-    padding: 15vh;
-    border-left: 50px solid #efea20;
-    background-color: #f4f98f;
-    color: var(--text-color2);
+    width: 17vw;
+    height: 5vh;
+    padding: 5vh;
+    margin-top: 5vh;
+    border-left: 50px solid #301461;
+    background-color: var(--background-color3);
+    color: var(--text-color4);
     border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
-*/
+
+.hint-emoji {
+    font-size: 30px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.hint-text {
+    margin-left: 15px;
+    font-size: 15px;
+}
+
+@media only screen and (max-width: 1500px) and (min-width: 1115px) {
+
+}
+
+@media only screen and (max-width: 1114px) and (min-width: 768px) {
+
+}
+
+@media only screen and (max-width: 767px) and (min-width: 320px) {
+
+}
