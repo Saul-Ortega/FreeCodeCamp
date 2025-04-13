@@ -1,7 +1,8 @@
 :root {
     --background-color1: #5e28af;
-    --background-color2: #f4f98f;
+    --background-color2: #e5f526;
     --background-color3: #c7b8fa;
+    --background-color4: #8375c4;
     --text-color1: #2f1461;
     --text-color2: white;
     --text-color3: #5e28af;
@@ -27,6 +28,8 @@ body {
 
 .main-section {
     background-color: white;
+    width: 30vw;
+    height: auto;
     padding: 90px;
     border: 3px solid black;
     border-radius: 150px;
@@ -35,6 +38,7 @@ body {
 h1 {
     color: var(--text-color1);
     font-size: 40px;
+    text-align: center;
 }
 
 .container {
@@ -59,13 +63,19 @@ label {
 }
 
 #check-btn {
-    width: 80px;
-    height: 35px;
+    width: 100px;
+    height: 40px;
     background: var(--background-color1);
     color: var(--text-color2);
     font-weight: bold;
     border: 2px solid var(--background-color1);
     border-radius: 15px;
+}
+
+#check-btn:hover {
+    background-color: var(--background-color2);
+    border: 2px solid black;
+    color: var(--text-color4);
 }
 
 .container-hint {
@@ -83,6 +93,16 @@ label {
     position: relative;
 }
 
+.container-hint:hover {
+    background-color: var(--background-color4);
+}
+
+.container-hint:hover .hint-emoji {
+    transform: rotate(40deg);
+    scale: 1.2;
+    transition-duration: 0.5s;
+}
+
 .hint-emoji {
     font-size: 30px;
     position: absolute;
@@ -94,17 +114,84 @@ label {
 
 .hint-text {
     margin-left: 15px;
-    font-size: 15px;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 1703px) and (min-width: 1501px) {
+    .main-section {
+        width: 45vw;
+    }
+
+    .hint-text {
+        font-size: 19px;
+    }
 }
 
 @media only screen and (max-width: 1500px) and (min-width: 1115px) {
+    .main-section {
+        width: 45vw;
+    }
 
+    .hint-text {
+        font-size: 14px;
+    }
 }
 
 @media only screen and (max-width: 1114px) and (min-width: 768px) {
+    .main-section {
+        width: 60vw;
+    }
 
+    h1 {
+        font-size: 35px;
+    }
+
+    .container-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #check-btn {
+        font-size: 15px;
+    }
+
+    .container-hint {
+        width: 35vw;
+    }
 }
 
 @media only screen and (max-width: 767px) and (min-width: 320px) {
+    .main-section {
+        margin-top: 10vh;
+        width: 90vw;
+        padding: 0 0 25px 0;
+        border-radius: 75px;
+    }
 
+    .container-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #text-input {
+        width: 120%;
+    }
+
+    #result {
+        margin-top: 25px;
+    }
+
+    .container-hint {
+        width: 60vw;
+        height: 40vh;
+    }
+
+    .hint-text {
+        margin-left: 25px;
+        font-size: 18px;
+    }
 }
