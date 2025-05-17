@@ -1,4 +1,21 @@
 /*QUIERO PONER UNA COMBINACIÓN DEL COLOR DEL MARMOL QUE ES ESTE #bdbdbd Y EL BRONCE ANTIGUO #665d1e*/
 ::root {
-    
+    --background-color1: #d1d1d1;
+    --background-color2: #aaaaaa;
+    --background-color3: #dcc97a;
+    --background-color4: #b09c32;
+    --text-color1: #000;
+    --text-color2: #fff;
+}
+
+::selection {
+    background-color: var(--background-color4);
+}
+
+* {
+    font-family: "Luxurious Roman", 'Sans-serif';
+}
+
+body {
+    background-color: var(--background-color4);
 }
