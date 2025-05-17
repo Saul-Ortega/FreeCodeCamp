@@ -122,13 +122,13 @@ const getRomanNumber = (number) => {
 
 const showRomanNumber = () => {
     if (numberInput.value === "") {
-        outputResult.innerText = 'Please enter a valid number';
+        outputResult.innerHTML = `<p id='paragraph' class='error'>Please enter a valid number</p>`;
     } else if (numberInput.value <= -1) {
-        outputResult.innerText = 'Please enter a number greater than or equal to 1';
+        outputResult.innerHTML = `<p id='paragraph' class='error'>Please enter a number greater than or equal to 1</p>`;
     } else if (numberInput.value >= 4000) {
-        outputResult.innerText = 'Please enter a number less than or equal to 3999';
+        outputResult.innerHTML = `<p id='paragraph' class='error'>Please enter a number less than or equal to 3999</p>`;
     } else {
-        outputResult.innerText = getRomanNumber(numberInput.value);
+        outputResult.innerHTML = `<p id='paragraph'>${getRomanNumber(numberInput.value)}</p>`;
     }
 } 
 
