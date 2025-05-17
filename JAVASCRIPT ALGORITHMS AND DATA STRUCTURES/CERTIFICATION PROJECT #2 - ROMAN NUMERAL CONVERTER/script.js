@@ -121,7 +121,15 @@ const getRomanNumber = (number) => {
 }
 
 const showRomanNumber = () => {
-    outputResult.innerText = getRomanNumber(parseInt(numberInput.value));
+    if (numberInput.value === "") {
+        outputResult.innerText = 'Please enter a valid number';
+    } else if (numberInput.value <= -1) {
+        outputResult.innerText = 'Please enter a number greater than or equal to 1';
+    } else if (numberInput.value >= 4000) {
+        outputResult.innerText = 'Please enter a number less than or equal to 3999';
+    } else {
+        outputResult.innerText = getRomanNumber(numberInput.value);
+    }
 } 
 
 convertBtn.addEventListener("click", showRomanNumber);
