@@ -27,6 +27,7 @@ h1 {
     height: 580px;
     background-color: grey;
     border-radius: 50px;
+    position: relative;
 }
 
 .phone-camera {
@@ -47,8 +48,15 @@ h1 {
     font-size: 30px;
 }
 
+#results-div {
+    font-size: 30px;
+    margin-top: 130px;
+    text-align: center;
+}
+
 .btn-group {
-    margin-top: 410px;
+    position: absolute;
+    bottom: 20px;
 }
 
 #check-btn {
