@@ -1,0 +1,82 @@
+body {
+    width: 100vw;
+    height: 98vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Jost';
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.phone-frame {
+    width: 320px;
+    height: 600px;
+    background-color: black;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phone-display {
+    width: 300px;
+    height: 580px;
+    background-color: grey;
+    border-radius: 50px;
+}
+
+.phone-camera {
+    width: 120px;
+    height: 20px;
+    margin-top: 10px;
+    margin: 10px auto 0 auto;
+    background-color: black;
+    border-radius: 50px;
+}
+
+#user-input {
+    width: 280px;
+    height: 50px;
+    border-radius: 15px;
+    margin-top: 30px;
+    margin-left: 5px;
+    font-size: 30px;
+}
+
+.btn-group {
+    margin-top: 410px;
+}
+
+#check-btn {
+    width: 100px;
+    height: 40px;
+    font-size: 30px;
+    margin-left: 35px;
+    border-radius: 15px;
+    color: #025618;
+    background-color: #b1ffc5;
+}
+
+#check-btn:hover {
+    color: #b1ffc5;
+    background-color: #025618;
+}
+
+#clear-btn {
+    width: 100px;
+    height: 40px;
+    font-size: 30px;
+    margin-left: 20px;
+    border-radius: 15px;
+    color: #560202;
+    background-color: #ffbfb1;
+}
+
+#clear-btn:hover {
+    color: #ffbfb1;
+    background-color: #560202;
+}
