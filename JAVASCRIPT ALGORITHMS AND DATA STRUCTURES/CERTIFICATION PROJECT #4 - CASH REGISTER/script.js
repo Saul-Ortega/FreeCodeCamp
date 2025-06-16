@@ -1,5 +1,5 @@
 let price = 19.5;
-/*
+
 let cid = [
   ['PENNY', 1.01],
   ['NICKEL', 2.05],
@@ -11,8 +11,6 @@ let cid = [
   ['TWENTY', 60],
   ['ONE HUNDRED', 100]
 ];
-*/
-let cid = [["PENNY", 0.01], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 1], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]];
 
 const changeDue = document.getElementById('change-due');
 const customerCash = document.getElementById('cash');
@@ -20,7 +18,6 @@ const purchaseBtn = document.getElementById('purchase-btn');
 const totalPrice = document.getElementById('total-price');
 const cashInDrawer = document.getElementById('cash-in-drawer');
 
-//MOSTRAR EL PRECIO DEL PRODUCTO
 totalPrice.textContent = `Total price: ${price}`;
 
 const showCashRegisterBalance = () => {
@@ -36,7 +33,6 @@ const showCashRegisterBalance = () => {
   <li class='cid-list-content'>Hundreds: ${cid[8][1].toFixed(2)}</li></ol>`;
 }
 
-//MOSTRAR EL BALANCE DE LA CAJA
 showCashRegisterBalance();
 
 const monetaryDenominationsValues = [0.01, 0.05, 0.1, 0.25, 1, 5, 10, 20, 100];
@@ -76,7 +72,6 @@ const purchase = () => {
       changeDue.innerHTML = 'Status: OPEN ' + resultArray.map(el => `${el[0]}: $${el[1].toFixed(2)}`).join(' ');
     }
     showCashRegisterBalance();
-
   }
 }
 
