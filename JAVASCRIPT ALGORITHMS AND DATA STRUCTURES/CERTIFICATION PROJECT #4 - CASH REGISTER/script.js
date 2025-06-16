@@ -1,4 +1,5 @@
-let price = 1.87;
+let price = 19.5;
+/*
 let cid = [
   ['PENNY', 1.01],
   ['NICKEL', 2.05],
@@ -10,6 +11,8 @@ let cid = [
   ['TWENTY', 60],
   ['ONE HUNDRED', 100]
 ];
+*/
+let cid = [["PENNY", 0.01], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 1], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]];
 
 const changeDue = document.getElementById('change-due');
 const customerCash = document.getElementById('cash');
@@ -42,7 +45,7 @@ const purchase = () => {
   let totalCashRegisterAmount = cid.reduce((acummulator, currentValue) => acummulator += currentValue[1], 0);
   totalCashRegisterAmount = parseFloat(totalCashRegisterAmount.toFixed(2));
   const customerCashValue = parseFloat(customerCash.value);
-  
+
   if (customerCashValue < price) {
     alert('Customer does not have enough money to purchase the item');
   } else if (customerCashValue === price) {
@@ -52,28 +55,28 @@ const purchase = () => {
     let originalChange = change;
     let resultArray = [];
 
-    if (totalCashRegisterAmount < change) {
-      changeDue.textContent = 'Status: INSUFFICIENT_FUNDS';
-    } else {
-      for (let index = cid.length - 1; index >= 0; index--) {
-        if (change >= monetaryDenominationsValues[index] && cid[index][1] >= monetaryDenominationsValues[index]) {
-          resultArray.push([cid[index][0], 0]);
-          while(cid[index][1] >= monetaryDenominationsValues[index] && change >= monetaryDenominationsValues[index]) {
-            change -= monetaryDenominationsValues[index];
-            change = parseFloat(change.toFixed(2)); 
-            cid[index][1] -= monetaryDenominationsValues[index];
-            resultArray[resultArray.length - 1][1] += monetaryDenominationsValues[index];
-          }
+    for (let index = cid.length - 1; index >= 0; index--) {
+      if (change >= monetaryDenominationsValues[index] && cid[index][1] >= monetaryDenominationsValues[index]) {
+        resultArray.push([cid[index][0], 0]);
+        while (cid[index][1] >= monetaryDenominationsValues[index] && change >= monetaryDenominationsValues[index]) {
+          change -= monetaryDenominationsValues[index];
+          change = parseFloat(change.toFixed(2));
+          cid[index][1] -= monetaryDenominationsValues[index];
+          cid[index][1] = parseFloat(cid[index][1].toFixed(2));
+          resultArray[resultArray.length - 1][1] += monetaryDenominationsValues[index];
         }
       }
-
-      if (Math.abs(totalCashRegisterAmount - originalChange) < 0.01) {
-        changeDue.textContent = 'Status: CLOSED ' + resultArray.map(el => `${el[0]}: $${el[1].toFixed(2)}`).join(' ');
-      } else {
-        changeDue.innerHTML = 'Status: OPEN ' + resultArray.map(el => `${el[0]}: $${el[1].toFixed(2)}`).join(' ');
-      }
-      showCashRegisterBalance();
     }
+
+    if (totalCashRegisterAmount < change || change !== 0) {
+      changeDue.textContent = 'Status: INSUFFICIENT_FUNDS';
+    } else if (Math.abs(totalCashRegisterAmount - originalChange) < 0.01) {
+      changeDue.textContent = 'Status: CLOSED ' + resultArray.map(el => `${el[0]}: $${el[1].toFixed(2)}`).join(' ');
+    } else {
+      changeDue.innerHTML = 'Status: OPEN ' + resultArray.map(el => `${el[0]}: $${el[1].toFixed(2)}`).join(' ');
+    }
+    showCashRegisterBalance();
+
   }
 }
 
