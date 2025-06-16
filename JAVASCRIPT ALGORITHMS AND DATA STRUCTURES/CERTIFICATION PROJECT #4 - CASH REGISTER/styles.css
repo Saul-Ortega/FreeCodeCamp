@@ -16,10 +16,10 @@ body {
 }
 
 main {
-    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: white;
     max-width: 800px;
     width: 80%;
     border-radius: 10px;
@@ -31,14 +31,16 @@ main {
     background-color: #f64545;
 }
 
+#change-due {
+    width: 50%;
+    font-size: 20px;
+    text-align: center;
+}
+
 .cash-from-customer {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.change-due-result {
-    font-size: 18px;
 }
 
 #cash {
