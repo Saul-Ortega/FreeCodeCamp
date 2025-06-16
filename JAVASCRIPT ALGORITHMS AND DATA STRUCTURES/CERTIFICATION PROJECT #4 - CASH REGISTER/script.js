@@ -20,7 +20,6 @@ const cashInDrawer = document.getElementById('cash-in-drawer');
 //MOSTRAR EL PRECIO DEL PRODUCTO
 totalPrice.textContent = `Total price: ${price}`;
 
-//MOSTRAR EL BALANCE DE LA CAJA
 const showCashRegisterBalance = () => {
   cashInDrawer.innerHTML = `<ol class='cid-list'><span class='list-title'>Change in drawer:</span>
   <li class='cid-list-content'>Pennies: ${cid[0][1].toFixed(2)}</li>
@@ -34,6 +33,7 @@ const showCashRegisterBalance = () => {
   <li class='cid-list-content'>Hundreds: ${cid[8][1].toFixed(2)}</li></ol>`;
 }
 
+//MOSTRAR EL BALANCE DE LA CAJA
 showCashRegisterBalance();
 
 const monetaryDenominationsValues = [0.01, 0.05, 0.1, 0.25, 1, 5, 10, 20, 100];
@@ -49,16 +49,11 @@ const purchase = () => {
     changeDue.innerHTML = 'No change due - customer paid with exact cash';
   } else {
     let change = parseFloat((customerCashValue - price).toFixed(2));
+    let originalChange = change;
     let resultArray = [];
 
     if (totalCashRegisterAmount < change) {
-      if (change > 0) {
-        changeDue.textContent = 'Status: INSUFFICIENT_FUNDS';
-      } else {
-        changeDue.textContent = 'Status: OPEN ' + resultArray.map(el => `${el[0]}: $${el[1].toFixed(2)}`).join(' ');
-      }
-    } else if (Math.abs(totalCashRegisterAmount - change) < 0.01) {
-      changeDue.textContent = 'Status: CLOSED ' + cid.map(el => `${el[0]}: $${el[1].toFixed(2)}`).join(' ');
+      changeDue.textContent = 'Status: INSUFFICIENT_FUNDS';
     } else {
       for (let index = cid.length - 1; index >= 0; index--) {
         if (change >= monetaryDenominationsValues[index] && cid[index][1] >= monetaryDenominationsValues[index]) {
@@ -71,10 +66,14 @@ const purchase = () => {
           }
         }
       }
-      changeDue.innerHTML = 'Status: OPEN ' + resultArray.map(el => `${el[0]}: $${el[1].toFixed(2)}`).join(' ');
+
+      if (Math.abs(totalCashRegisterAmount - originalChange) < 0.01) {
+        changeDue.textContent = 'Status: CLOSED ' + resultArray.map(el => `${el[0]}: $${el[1].toFixed(2)}`).join(' ');
+      } else {
+        changeDue.innerHTML = 'Status: OPEN ' + resultArray.map(el => `${el[0]}: $${el[1].toFixed(2)}`).join(' ');
+      }
       showCashRegisterBalance();
     }
-    console.log(totalCashRegisterAmount)
   }
 }
 
