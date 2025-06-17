@@ -1,6 +1,7 @@
 body {
     width: 100vw;
     overflow-x: hidden;
+    overflow-y: hidden;
     font-family: 'Spectral';
     font-size: 20px;
     background: #f6f5c0;
@@ -15,9 +16,8 @@ main {
 }
 
 .container {
-    width: 60%;
-    height: 500px;
-    max-width: 450px;
+    min-height: 620px;
+    min-width: 450px;
     background-color: #ef7d7d;
     border-radius: 15px;
     border-right: 10px solid #b32626;
@@ -54,6 +54,29 @@ p {
 
 #search-button:hover {
     background-color: #f6f5c0;
+}
+
+.main-data {
+    width: 360px;
+    height: 220px;
+    margin: 15px auto 0 auto;
+}
+
+#creature-name {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.creature-type {
+    font-size: 16px;
+    margin-right: 15px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#special-name {
+    font-weight: bold;
+    margin-top: 15px;
 }
 
 table, th, td {

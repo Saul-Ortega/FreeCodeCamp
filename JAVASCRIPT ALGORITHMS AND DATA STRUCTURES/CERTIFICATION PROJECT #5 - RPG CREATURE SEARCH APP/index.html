@@ -14,16 +14,19 @@
         <h1>RPG CREATURE SEARCH APP</h1>
         <div class="container">
             <p>Type the name of the creature or the ID</p>
-            <div class="input-container">
-                <input type="text" id="search-input">
+            <form class="input-container">
+                <input type="text" id="search-input" required>
                 <button id="search-button">Search</button>
-            </div>
+            </form>
             <div class="main-data">
                 <span id="creature-name"></span>
                 <span id="creature-id"></span>
-                <div id="weight"></div>
-                <div id="height"></div>
+                <br>
+                <span id="weight"></span>
+                <span id="height"></span>
                 <div id="types"></div>
+                <div id="special-name"></div>
+                <div id="special-description"></div>
             </div>
             <table class="stats-data">
                 <tr>
