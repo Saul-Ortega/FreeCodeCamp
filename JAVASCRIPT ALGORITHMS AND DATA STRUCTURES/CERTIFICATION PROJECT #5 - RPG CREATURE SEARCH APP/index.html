@@ -3,9 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>RPG CREATURE SEARCH APP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <main>
+        <h1>RPG CREATURE SEARCH APP</h1>
+        <div class="container">
+            <p>Type the name of the creature or the ID</p>
+            <div class="input-container">
+                <input type="text" id="search-input">
+                <button id="search-button">Search</button>
+            </div>
+            <div class="main-data">
+                <span id="creature-name"></span>
+                <span id="creature-id"></span>
+                <div id="weight"></div>
+                <div id="height"></div>
+                <div id="types"></div>
+            </div>
+            <table class="stats-data">
+                <tr>
+                    <td>Base</td>
+                    <td>Stats</td>
+                </tr>
+                <tr>
+                    <td>HP:</td>
+                    <td id="hp"></td>
+                </tr>
+                <tr>
+                    <td>Attack:</td>
+                    <td id="attack"></td>
+                </tr>
+                <tr>
+                    <td>Defense:</td>
+                    <td id="defense"></td>
+                </tr>
+                <tr>
+                    <td>Sp. Attack:</td>
+                    <td id="special-attack"></td>
+                </tr>
+                <tr>
+                    <td>Sp. Defense:</td>
+                    <td id="special-defense"></td>
+                </tr>
+                <tr>
+                    <td>Speed:</td>
+                    <td id="speed"></td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
